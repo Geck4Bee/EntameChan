@@ -1,9 +1,9 @@
-data/users/*
-data/settings.json
-!data/users/user-content.example.json
+/data/users/*
+/data/settings.json
+/!data/users/user-content.example.json
 *.db
-node_modules/*
-js/nullchan.js
-js/nullchan.js.map
-content.json
-update_files.rb
+/node_modules/*
+/js/nullchan.js
+/js/nullchan.js.map
+/content.json
+/update_files.rb
