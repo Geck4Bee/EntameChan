@@ -2,6 +2,8 @@
 /data/settings.json
 /!data/users/user-content.example.json
 *.db
+*.db-shm
+*.db-wal
 /node_modules/*
 /js/nullchan.js
 /js/nullchan.js.map

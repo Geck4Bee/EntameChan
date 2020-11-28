@@ -152,7 +152,7 @@ export default class Post extends React.Component {
           <div className={infoClassName}>
             <div className="time-and-id">
               <strong className={userNameClass}>
-                {!!this.state.data.anonymous ? "Anonymous" : `${this.userName()}`}
+                {!!this.state.data.anonymous ? "ボリあき" : `${this.userName()}`}
               </strong>
               &nbsp;
               {this.formattedTime()},
