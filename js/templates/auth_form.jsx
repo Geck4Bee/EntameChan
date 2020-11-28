@@ -15,30 +15,30 @@ export default class AuthForm extends React.Component {
     if (newSign == "other") {
       this.showAuthDialog()
       event.preventDefault()
-      event.currentTarget.value = "anonymous"
+      event.currentTarget.value = "ボリあき"
       return
     }
   }
 
   render () {
     let content
-    let submitText = "New Thread"
+    let submitText = "スレッド作成"
 
     if (this.state.isReply) {
-      submitText = "New Reply"
+      submitText = "おへんじ..."
     }
 
     if (!!!this.state.userName) {
       content = <div className="auth-please" onClick={this.showAuthDialog}>
-        <u>Authorize</u> to post messages.<br/>
-        You will still be able to post anonymously.
+        <u>認証</u> 投稿.<br/>
+        匿名で投稿できます
       </div>
     } else {
       content = <div>
         <select name="name" className="name" onChange={this.handleChange.bind(this)} defaultValue={"anonymous"}>
-          <option value="anonymous" >Anonymous</option>
+          <option value="anonymous" >ボリあき</option>
           <option value="signed">{this.state.userName}</option>
-          <option value="other">select other...</option>
+          <option value="other">他のIDを選択</option>
         </select>      
         <input type="submit" value={submitText} className="submit" />
       </div>

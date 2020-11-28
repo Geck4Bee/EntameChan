@@ -19,7 +19,7 @@ export default class Header extends React.Component {
         <h2>{this.state.board.description}</h2>
 
         <a href={Helpers.fixLink(`/${Nullchan.engineSettings.siteAddress}`)} 
-          target="_parent" className="to-main">[back to all boards]</a>
+          target="_parent" className="to-main">[掲示板一覧に戻る]</a>
       </div>
     )
   }

@@ -30,7 +30,7 @@ export class Attachment extends React.Component {
     return(
       <div className="attachment">
         <div className="attachment-info">
-          File: {Helpers.formatSizeUnits(this.state.data.attachment_size)},&nbsp;
+          ファイル: {Helpers.formatSizeUnits(this.state.data.attachment_size)},&nbsp;
           {this.state.data.attachment_full_width}x{this.state.data.attachment_full_height},&nbsp;
           <a href={this.state.data.attachment_full_path} 
             download={this.state.data.attachment} target="_blank">{this.shortName()}</a>
@@ -38,7 +38,7 @@ export class Attachment extends React.Component {
         <div className="image-loading" style={
           { width:  `${this.state.data.attachment_thumb_width}px`, 
             height: `${this.state.data.attachment_thumb_height}px` }
-        }><br/><br/>image loading...</div>
+        }><br/><br/>画像読み込み中...</div>
         <a href={this.state.data.attachment_full_path} target="_blank">
           <img width={this.state.data.attachment_thumb_width} 
             height={this.state.data.attachment_thumb_height} 

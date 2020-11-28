@@ -88,7 +88,7 @@ export default class Form extends React.Component {
     result.anonymous = (name.options[name.selectedIndex].value == "anonymous")
 
     if (!!!result.file && result.body == "") {
-      alert("Your post is empty")
+      alert("何も入力されていません")
       return false
     }
     return result
@@ -111,13 +111,13 @@ export default class Form extends React.Component {
         onSubmit={this.handleSubmit.bind(this)} ref={(f) => this._node = f}>
         <div className="form-preloader">
           <span>
-            sending your message...
+            送信中...
           </span>
         </div>
         <table>
           <tbody>
             <tr>
-              <td>Comment</td>
+              <td>コメント</td>
               <td>
                 <textarea placeholder="Up to 3000 symbols, required if no file attached" 
                   name="body" className="text" ref={(t) => this._textarea = t}>
@@ -126,13 +126,13 @@ export default class Form extends React.Component {
               </td>
             </tr>
             <tr>
-              <td>File</td>
+              <td>ファイル</td>
               <td>
                 <input type="file" name="file" className="file"/>
               </td>
             </tr>
             <tr>
-              <td>Sign as</td>
+              <td>ID選択</td>
               <td>
                 <AuthForm ref={(a) => View.rAuthForm = a} userName={Nullchan.shortUserName()} isReply={!!this.state.parent} />
               </td>

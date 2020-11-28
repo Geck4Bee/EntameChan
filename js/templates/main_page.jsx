@@ -18,7 +18,7 @@ export default class MainPage extends React.Component {
         {logo}
         <hr/>
         <blockquote className="monospace">
-          powered by <a href="https://github.com/Nullchan/nullchan" target="_parent">Nullchan engine</a> (v {VERSION})
+          powered by <a href="https://github.com/kustomzone/nullchan" target="_parent">Nullchan engine</a> (v {VERSION})
         </blockquote>
 
         <hr/>
@@ -37,20 +37,18 @@ export default class MainPage extends React.Component {
                   </tbody>
                 </table>
                 <span className="counters">
-                  last post: <em id="last-post">{this.state.lastPostTime}</em>
+                  最終投稿日: <em id="last-post">{this.state.lastPostTime}</em>
                   <br/>
-                  total posts: <em id="total-posts">{this.state.totalPosts}</em>
+                  総投稿数: <em id="total-posts">{this.state.totalPosts}</em>
                 </span>
               </td>
               <td>
                 <blockquote>
                   <strong>{Nullchan.engineSettings.siteName}</strong> is a decentralised P2P imageboard
-                  powered by <a href="https://github.com/Nullchan/nullchan" target="_parent">Nullchan</a> engine
+                  powered by <a href="https://github.com/kustomzone/nullchan" target="_parent">Nullchan</a> engine
                   running on <a href="https://github.com/HelloZeroNet/ZeroNet" target="_parent">ZeroNet</a>.
                   <br/><br/>
-                  The engine is still very early in development and thus this site is basically 
-                  just a proof-of-concept tech demo which misses a lot of crucial features, 
-                  but it will get better with time.
+                  エンタメちゃんは生まれたばかりの掲示板です。エンジョイ＆エキサイティング！
                   <br/>
                   <br/>
                   <hr/>

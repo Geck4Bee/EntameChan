@@ -10,8 +10,8 @@ export default class SkipGap extends React.Component {
   render() {
     return (
       <div className="skip-gap" onClick={this.handleClick.bind(this)}>
-        {this.props.count} post(s) omitted. ↕ <span className="expand-button">
-          expand
+        {this.props.count} 省略されています. ↕ <span className="expand-button">
+          拡張
         </span>
       </div>
     )

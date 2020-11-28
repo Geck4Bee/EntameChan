@@ -46,22 +46,22 @@ export default class BoardPage extends React.Component {
   render() {
     let content = ""
     let parent = null 
-    let buttonText = "create new thread"
+    let buttonText = "スレッド作成"
     let threads
     let pageBox
     let linkToList
 
     if (Nullchan.currentPage == "thread") { 
-      buttonText = "reply to this thread"
+      buttonText = "返信"
       parent = this.props.threads[0][0].hashsum
 
       linkToList = <a href={Helpers.fixLink(`?/${Nullchan.currentBoard.key}/`)} target="_parent"
-       className="to-threads"><em>←</em><br/>back to all threads</a>
+       className="to-threads"><em>←</em><br/>スレッド一覧に戻る</a>
     }
 
     if (!!!this.props.threads) {
       content = <div id="empty-board">
-        It looks like this board is empty. <br/> Why don't you post something?
+        掲示板には何もない. <br/> 何もないのだ
       </div>
     } else {
       threads = this.paginate(this.props.threads, { 

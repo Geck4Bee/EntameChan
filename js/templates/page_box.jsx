@@ -34,7 +34,7 @@ export default class PageBox extends React.Component {
         ellipsis={'…'}
         onSelect={this.handleSelect}
       >
-        Pages: 
+        ページ: 
         &nbsp;
         &nbsp;
         <Paginator.Segment field="beginPages" />
