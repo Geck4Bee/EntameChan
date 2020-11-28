@@ -1,0 +1,22 @@
+{
+ "address": "1BzMBBpmRBvFz2h5jPmNBrhsr8ZE92gN5Y",
+ "cert_auth_type": "web",
+ "cert_sign": "HK8N8gJBNmDP28fna+9XRfzTHeSrNNDMfmmmrmY634zKbwXP9Lm4t53ewKPzNxCivmOZ8CAafGfdCojuiyOao+0=",
+ "cert_user_id": "toriaezutotta@zeroid.bit",
+ "files": {
+  "data.json": {
+   "sha512": "3f18719c6d24037e6be7e0a33aaa19e2f77393797f7ab3836512f45a8f14f461",
+   "size": 245
+  },
+  "test.txt": {
+   "sha512": "3a37276f7dbd6ae13241d1f614a37b5beef67442dce7b83f81ca6c1b6b03e877",
+   "size": 9
+  }
+ },
+ "inner_path": "data/users/1DPJa3K1kvx74wNxmrmta2AdcUgiiEk2xg/content.json",
+ "modified": 1606567047,
+ "optional": ".*\\.(png|jpg|gif)",
+ "signs": {
+  "1DPJa3K1kvx74wNxmrmta2AdcUgiiEk2xg": "HJDHHY7EPWAbaAiGXAziRMNdOuaeyHBzxo4QO26rIXbEUZ9qt7K8GA9UVVCNwHb7RBmhnsU2s9RurRqMRXdVDj0="
+ }
+}

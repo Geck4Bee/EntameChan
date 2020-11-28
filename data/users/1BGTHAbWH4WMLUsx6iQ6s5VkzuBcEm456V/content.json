@@ -1,0 +1,40 @@
+{
+ "address": "1BzMBBpmRBvFz2h5jPmNBrhsr8ZE92gN5Y",
+ "cert_auth_type": "web",
+ "cert_sign": "HJ8+Ea4XefwZbUz56cn5c6xms0ULb55LonxMGp+dJ1KZTSXuwVNSnzYS++a/HNoja9zr3NkSqyjqO9SVJTFYz80=",
+ "cert_user_id": "kaerunin@zeroid.bit",
+ "files": {
+  "data.json": {
+   "sha512": "68c6420ed1c5a5277c52107b105a5aebe4c7d58d84b7c7e32f5d1a3ef4777182",
+   "size": 2290
+  },
+  "test.txt": {
+   "sha512": "3a37276f7dbd6ae13241d1f614a37b5beef67442dce7b83f81ca6c1b6b03e877",
+   "size": 9
+  }
+ },
+ "files_optional": {
+  "59da152238f93e02a5046695ae11745b-thumb.jpg": {
+   "sha512": "3d5928694f3be8e4e86c42ce775c47d1345f6c47fff9203d6e2354a74270e1f9",
+   "size": 44086
+  },
+  "59da152238f93e02a5046695ae11745b.jpg": {
+   "sha512": "9cde9747e3e3fc18081966a5c1f5b34100f8d6f613a6e560943120cc432fa77f",
+   "size": 2671555
+  },
+  "9e0721107db33505304f9b471fd56fb6-thumb.jpg": {
+   "sha512": "491bc0986d2e5f6f2134cd22234a97b5d12c928742442317efc9efc79ce10c2d",
+   "size": 44338
+  },
+  "9e0721107db33505304f9b471fd56fb6.jpg": {
+   "sha512": "2037744eec15dc8d5a466abd4a54427ad4ae5fedadcaaf131a9f6ef5fb4e2bce",
+   "size": 635098
+  }
+ },
+ "inner_path": "data/users/1BGTHAbWH4WMLUsx6iQ6s5VkzuBcEm456V/content.json",
+ "modified": 1606568555,
+ "optional": ".*\\.(png|jpg|gif)",
+ "signs": {
+  "1BGTHAbWH4WMLUsx6iQ6s5VkzuBcEm456V": "HB6gr5EOzmGlpvZ4fnpZYAqRHrb/QLQdkatwdeK3wWicJG1S0nhMEXm6UPT2bhyHtjSZzx+HHoE6YyKM7JBISus="
+ }
+}
