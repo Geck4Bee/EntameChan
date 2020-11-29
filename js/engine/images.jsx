@@ -6,15 +6,43 @@ export default class Images {
         return resolve(formData)
       }
 
-      if (["image/jpeg", "image/png", "image/jpg"].indexOf(formData.file.type) == -1) {
-        reject("Only JPEG and PNG files are supported at the moment.")
+      if (["image/jpeg", "image/png", "image/jpg", "text/plain", "application/pdf"].indexOf(formData.file.type) == -1) {
+        reject("jpeg, png, txt, pdfのみサポートしています")
         return
       }
 
       let image  = document.createElement("img")
       let reader = new FileReader()
 
-      reader.onload = (event) => { image.src = event.target.result }
+      reader.onload = (event) => { 
+        if (["image/jpeg", "image/png", "image/jpg"].indexOf(formData.file.type) != -1) {
+          image.src = event.target.result
+        } else if (["text/plain", "application/pdf"].indexOf(formData.file.type) != -1) {
+          let type = (formData.file.type === "text/plain") ? "txt" : "pdf"
+          let data = event.target.result
+          let hash = md5(data)
+
+          formData.attachment             = formData.file.name.trim()
+          formData.attachment_size        = formData.file.size
+          formData.attachment_full_height = 600
+          formData.attachment_full_width  = 600
+          formData.attachment_thumb_height = 200
+          formData.attachment_thumb_width  = 200
+
+          if (formData.attachment == "") {
+            formData.attachment = `${hash}.${type}`
+          }
+
+          Files.uploadFile(data, `${hash}.${type}`, false).then((fullPath) => {
+            Files.uploadFile(data, `${hash}-thumb.${type}`, false).then((thumbPath) => {
+              formData.attachment_thumb_path = thumbPath
+              formData.attachment_full_path = fullPath
+              delete formData.file
+              resolve(formData)
+            })
+          })
+        }
+      }
       image.onload  = () => {
         let canvas    = document.createElement("canvas")
         let ctx       = canvas.getContext("2d")
@@ -69,6 +97,7 @@ export default class Images {
           })
         })
       }
+
       reader.readAsDataURL(formData.file)
     })
   }

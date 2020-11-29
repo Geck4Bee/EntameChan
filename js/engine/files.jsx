@@ -23,7 +23,7 @@ class Files {
           })
         } else {
           let data = JSON.parse(contentJson)
-          if (data.optional == ".*\\.(png|jpg|gif)") {
+          if (data.optional == ".*\\.(png|jpg|gif|txt|pdf)") {
             this.setOptional(contentJson).then(() => { resolve() })
           } else {
             this.optionalOK = true
@@ -51,7 +51,7 @@ class Files {
     return new Promise((resolve) => {
       let path = this.path("content.json")
       let data = JSON.parse(strJson)
-      data.optional = ".*\\.(png|jpg|gif)"
+      data.optional = ".*\\.(png|jpg|gif|txt|pdf)"
       let json_raw = unescape(encodeURIComponent(JSON.stringify(data, undefined, '\t')))
 
       Nullchan.cmd("fileWrite", [path, btoa(json_raw)], (write) => {

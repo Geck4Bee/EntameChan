@@ -16,6 +16,17 @@ module.exports = {
         options: {
           presets: ['@babel/preset-env']
         }
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 100000,
+            },
+          },
+        ],
       }
     ]
   }

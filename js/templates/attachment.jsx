@@ -1,10 +1,25 @@
 import React    from "react"
 import Helpers  from "../libs/helpers.jsx"
+import pdfIcon from '../../img/pdf_icon_white_600.png'
+import txtIcon from '../../img/txt_icon_white_600.png'
 
 export class Attachment extends React.Component {
   constructor(props) {
     super(props)
     this.state = props
+    this.thumb = this.setIcon()
+  }
+
+  setIcon() {
+    let thumb = this.state.data.attachment_thumb_path
+    const type = this.state.data.attachment.slice(this.state.data.attachment.lastIndexOf('.') + 1)
+    if (type === "txt") {
+      thumb = txtIcon
+    }
+    if (type === "pdf") {
+      thumb = pdfIcon
+    }
+    return thumb
   }
 
   shortName() {
@@ -42,7 +57,7 @@ export class Attachment extends React.Component {
         <a href={this.state.data.attachment_full_path} target="_blank">
           <img width={this.state.data.attachment_thumb_width} 
             height={this.state.data.attachment_thumb_height} 
-            src={this.state.data.attachment_thumb_path} 
+            src={this.thumb} 
             style={imageDisplay}
             onLoad={this.onImageLoad.bind(this)}
           />
