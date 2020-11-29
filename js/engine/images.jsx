@@ -6,8 +6,8 @@ export default class Images {
         return resolve(formData)
       }
 
-      if (["image/jpeg", "image/png", "image/jpg", "text/plain", "application/pdf"].indexOf(formData.file.type) == -1) {
-        reject("jpeg, png, txt, pdfのみサポートしています")
+      if (["image/jpeg", "image/png", "image/jpg"].indexOf(formData.file.type) == -1) {
+        reject("jpeg, pngのみサポートしています")
         return
       }
 
